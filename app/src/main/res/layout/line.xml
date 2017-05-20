@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content" 
+	android:layout_width="wrap_content"
+	android:orientation="horizontal"
+	android:id="@+id/dialog">
+	<LinearLayout
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content"
+		android:orientation="horizontal"
+		android:id="@+id/dialogname">
+		<TextView
+			android:layout_height="wrap_content"
+   			android:layout_width="wrap_content"
+  			android:id="@+id/tvUserName" 
+  			android:text="姓名：" />
+		<EditText 
+		    android:layout_height="wrap_content"
+  			android:layout_width="wrap_content" 
+  			android:id="@+id/etUserName" 
+  			android:minWidth="200dip"/>
+	</LinearLayout>  
+	<LinearLayout
+			android:layout_height="wrap_content" 
+			android:layout_width="wrap_content"
+			android:orientation="horizontal"
+			android:id="@+id/dialognum"
+ 			android:layout_below="@+id/dialogname"
+			>
+  		<TextView 
+  		    android:layout_height="wrap_content"
+   			android:layout_width="wrap_content"
+  			android:id="@+id/tvPassWord" 
+  			android:text="密码：" />
+		<EditText 
+		    android:layout_height="wrap_content"
+  			android:layout_width="wrap_content" 
+  			android:id="@+id/etPassWord" 
+  			android:minWidth="200dip"/>
+ 	</LinearLayout>  
+</RelativeLayout>

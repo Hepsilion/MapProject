@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mapproject"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:name="com.example.mapproject.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="pObijtvOHq8wQuQiNY8Q4FH5ZeGpEAh3" />
+        <activity
+            android:name="com.example.mapproject.WelcomeActivity"
+            android:label="@string/app_name"
+            
+            android:screenOrientation="sensor"  
+            android:configChanges="orientation|keyboardHidden">   
+            <!-- 注意添加转屏的相关设置 -->  
+        
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <service android:name="com.example.mapproject.GetMsgService"></service>
+        
+        <activity android:name="com.example.login.LoginActivity"></activity>
+        <activity android:name="com.example.login.RegisterActivity"></activity>
+        
+        <activity android:name="com.example.sqlite.QueryActivity"></activity>
+        
+        <activity android:name="com.example.others.settingActivity"></activity>  
+        <activity android:name="com.example.others.helpActivity"></activity>  
+		
+        <activity android:name="com.example.sqlite.FriendListActivity"></activity>
+        <activity android:name="com.example.sqlite.AddFriendActivity"></activity>
+        <activity android:name="com.example.sqlite.TestActivity"></activity>
+        
+        <activity android:name="com.example.util.AddFriendActivity"></activity>
+        
+       	<activity android:name="com.example.mapproject.MainActivity"></activity>
+        <service android:name="com.example.mapproject.TrackService"></service>
+        
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:permission="android.permission.BAIDU_LOCATION_SERVICE"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v3.3" />
+            </intent-filter>
+        </service>
+    </application>
+    <!--添加对多种屏幕支持
+     	android:anyDensity="true" 
+    	这个属性指明应用程序是否包含了能够适用于任何屏幕密度的资源。
+		对于支持Android1.6（API Level 4）和更高版本的应用程序，这个属性的默认值是true，
+   		 并且除非绝对的确认这是应用程序正常工作所必须的，否则不应该把它设置为false。
+   		 只是在应用程序直接操作位图时才需要禁止这个属性。
+     
+     	android:largeScreens="true"
+      	这个属性用于指示应用程序是否支持较大外形的屏幕。
+      	一个large类型的屏幕被定义成一个比normal类型的手持设备的屏幕明显还要大的屏幕，
+      	并且为了让应用程序能够良好的使用，使用这个属性时要特别小心，尽管可以依赖系统来调整尺寸以便能够填充屏幕。
+      	这个属性的默认值实际上在某些版本之间是不同的，因此最好在任何时候都明确的声明这个属性。
+    	  如果设置为false，系统会启用屏幕兼容模式，这时要格外的小心。
+     
+     	android:normalScreens="true"
+      	这个属性用于指示应用程序是否支持普通外形的屏幕。
+      	典型的是HVGA中等密度的屏幕，但是WQVGA低密度和WVGA高密度屏幕也被认为是普通屏幕。
+      	这个属性的默认值是true。
+     
+     	android:smallScreens="true" 
+      	这个属性用于指定应用程序是否支持较小外形的屏幕。
+      	一个small类型的屏幕被定义成一个比normal（传统的HVGA）类型的屏幕还要小的屏幕。
+      	外部服务（如Google Play）不会把不支持小屏的应用程序提供给小屏设备，
+      	因为很少有能够确保该应用程序在小屏幕的设备上正常工作的平台。这个属性的默认值是true。
+     
+     	android:resizeable="true" 
+             	这个属性用于指示针对不同的屏幕尺寸，应用程序是否可以调整尺寸。默认值是true。
+    	-->
+    
+	<!-- 添加对屏幕的支持 -->
+	<supports-screens 
+	    android:largeScreens="true"
+		android:normalScreens="true" 
+		android:smallScreens="true"
+		android:resizeable="true" 
+		android:anyDensity="true" />
+	
+	<!--使用网络功能所需权限  --> 
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
+	<uses-permission android:name="android.permission.READ_LOGS"></uses-permission>
+	<!-- SDK离线地图和cache功能需要读写外部存储器 --> 
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>	
+	<!-- 获取设置信息和详情页直接拨打电话需要以下权限  --> 
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.CALL_PHONE"></uses-permission> 
+	
+</manifest>

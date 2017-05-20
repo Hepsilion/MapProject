@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_bar"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/help_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/selector_btn_back"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="返回"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="帮助"
+            android:textColor="@color/white"
+            android:textSize="20.0sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="本程序可以实现与好友之间的相互定位" >
+    </TextView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@drawable/shape_line" />
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="点击菜单键出现菜单选项" >
+    </TextView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@drawable/shape_line" />
+
+    <TextView
+        android:id="@+id/TextView03"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="定位菜单用来定位自己的位置，使自己的位置处于屏幕中央" >
+    </TextView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@drawable/shape_line" />
+
+    <TextView
+        android:id="@+id/TextView04"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="搜索菜单用来输入关键字，搜索周边的兴趣点" >
+    </TextView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@drawable/shape_line" />
+
+    <TextView
+        android:id="@+id/TextView05"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="线路菜单用来输入一个地名，显示自己到目的地的线路，目前有三种方式可供选择，驾车线路、步行线路、公交线路" >
+    </TextView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@drawable/shape_line" />
+
+    <TextView
+        android:id="@+id/TextView06"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="图层菜单用来将地图显示成不同模式，但是目前只能支持三种模式：卫星模式，交通模式，正常模式，街景模式暂不支持" >
+    </TextView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@drawable/shape_line" />
+
+    <TextView
+        android:id="@+id/TextView07"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="清空结果菜单用来当你使用了搜索菜单时，地图上出现太多标记干扰视线，可以用它清空兴趣点和其他标记" >
+    </TextView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@drawable/shape_line" />
+
+    <TextView
+        android:id="@+id/TextView08"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="刷新菜单用来当和好友位置共享时，刷新数据，请求数据更新" >
+    </TextView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@drawable/shape_line" />
+
+    <TextView
+        android:id="@+id/TextView09"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="登录菜单" >
+    </TextView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@drawable/shape_line" />
+
+</LinearLayout>
